@@ -1,0 +1,893 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Anek Devanagari", sans-serif;
+}
+
+.hero{
+    height: 100vh;
+    width: 100%;
+    
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.logo{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    font-weight: 800px;
+} 
+
+span{
+    color: #f36242;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+nav ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 1.1px;
+    font-size: 1rem;
+}
+
+nav ul li .active{
+    padding-left: 500px;
+}
+@media (max-width: 1444px){
+    nav ul li .active{
+        padding-left: 400px;
+        transition: .4s;
+    }
+}
+@media (max-width: 1325px){
+    nav ul li .active{
+        padding-left: 300px;
+        transition: .4s;
+    }
+    .heads{
+        margin: 240px 0 0 80px;
+    }
+}
+@media (max-width: 1205px){
+    nav ul li .active{
+        padding-left: 200px;
+        transition: .4s;
+    }
+}
+@media (max-width: 1086px){
+    nav ul li .active{
+        padding-left: 150px;
+        transition: .4s;
+    }
+}
+@media (max-width: 1027px){
+    nav ul li .active{
+        padding-left: 100px;
+        transition: .4s;
+    }
+}
+@media (max-width: 967px){
+    nav ul li .active{
+        padding-left: 50px;
+        transition: .4s;
+    }
+}
+@media (max-width: 908px){
+    nav ul li .active{
+        padding-left: 25px;
+        transition: .4s;
+    }
+}
+nav ul li a:hover{
+    color: #f36242;
+    transition: .4s;
+}
+
+.checkbtn{
+    font-size: 2rem;   
+    color: white;
+    float: right;   
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+.heads{
+    position: absolute;
+    z-index: 1000;
+    margin: 280px 0 0 80px;
+}
+
+
+.heads h1{
+    font-size: 4rem;
+    color: white;
+}
+
+.heads button{
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 15px;
+    height: 50px;
+    width: 160px;
+    padding: 7px 0 0 2px;
+    background-color: #000000a7;
+}
+
+.heads button:hover{
+    color: #f36242;
+    background-color: #000000;
+    transition: .5s;
+}
+
+/* ============Photo Grid=========== */
+.card__img img{
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 29.4% 35% 15% 25%;
+  gap: 10px;
+  place-content: center;
+  grid-template-rows: 50% 50%;
+  height: 94vh;
+  min-height: 460px;
+  padding: max(2vh, 1.5rem);
+  padding: 0 130px 0 130px;
+  margin-top: 100px;
+}
+@media screen and (max-width: 800px) {
+  section {
+    height: 35vh;
+    object-fit: cover;
+  }
+}
+
+section .card {
+  box-shadow: -2px 4px 15px rgba(0, 0, 0, 0.26);
+  transition: 0.4s  ;
+}
+
+section .card:hover{
+    transition: 0.5s;
+    transition-timing-function: ease-in-out ;
+    scale: 1.1;
+}
+
+section .card:nth-child(2) {
+  grid-column: 2/3;
+  grid-row: span 2;
+}
+@media screen and (max-width: 690px) {
+  section .card:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+section .card:nth-child(3) {
+  grid-column: span 2;
+}
+@media screen and (max-width: 690px) {
+  section .card:nth-child(3) {
+    grid-column: 2/4;
+    grid-row: 1/2;
+  }
+}
+@media screen and (max-width: 690px) {
+  section .card:nth-child(6) {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+}
+
+section .card .card__img {
+  position: relative;
+  height: 100%;
+}
+
+.about{
+    margin: 150px 89px 100px 89px;
+}
+
+.about .main{
+    display: flex !important;
+    justify-content: flex-start;
+}
+
+.carousel1 {
+    position: relative;
+    height: 400px;
+    width: 500px;
+    margin: 0;
+    margin-bottom: 5rem;
+  }
+  .carousel__images {
+    width: 500px;
+    height: 100%;
+    object-fit: cover;
+  }
+  .carousel__track-container {
+    background: rgb(63, 62, 63);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  .carousel__track {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .carousel__button {
+    position: absolute;
+    top: 50%;
+    padding-left: 50px;
+    transform: translateY(-50%);
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+  }
+  .carousel__button:hover {
+    color: white;
+    border-radius: 20px;
+  }
+  
+  .carousel__button--left {
+    left: -40px;
+    z-index: 1000;
+  }
+  .carousel__button--right {
+    right: -40px;
+     transform: translateY(-50%) rotate(180deg)
+  }
+  .carousel__button img {
+    width: 25px;
+  }
+  .carousel__nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 1rem;
+  }
+  .carousel__indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+  
+  .carousel__indicator.current-slide {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  .is-hidden {
+    display: none;
+  }
+
+#heading{
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#para{
+    text-align: justify; 
+    font-family: Poppins, sans-serif; 
+    color: black;
+    padding: 20px 50px 0 50px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.pic-section{
+    height: 100vh;
+    width: 100%;
+    margin-left: -90px;
+   }
+  
+   .pic-section img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+   }
+  
+   .top-corner{
+    position: absolute;
+    color: white;
+    margin-left: 30px;
+    margin-top: 30px;
+   }
+  
+   .centerall{
+    position: relative;
+    color: white;
+    margin-left: 520px;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.2;
+   }
+  
+   #para1{
+    padding-top: 20%;
+   }
+
+.text-section{
+    margin: 100px 0 0 100px;
+    text-align: center;
+    width: 60%;
+    margin-left: 21%;
+   }
+  
+   .text-section h2{
+    font-size: 2.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+   }
+   .text-section p{
+    font-family: "Poppins", sans-serif;
+  
+   }
+   .text-section button{
+    margin-top: 100px;
+    background-color: black;
+    border: none;
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+   }
+  
+   .text-section button:hover{
+    transition: 0.4s;
+    color: black;
+    background-color: #f36242 ;
+   }
+
+.owl-carousel .item img{
+  height: 400px;
+  width: 300px;
+  object-fit: cover;
+  margin-top: 100px;
+ }
+
+ .owl-carousel .item1{
+  object-fit: cover;
+  height: 600px;
+  width: 440px;
+ }
+
+ footer{
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background: #101010;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0 0 -89px;
+}
+
+footer p:nth-child(1){
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+footer p:nth-child(2){
+    color: white;
+    font-size: 17px;
+    width: 500px;
+    text-align: center;
+    line-height: 26px;
+}
+
+.social{
+    display: flex;
+}
+
+.social a{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00fff7;
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social a:hover{
+    transform: scale(1.3);
+    transition: .3s;
+}
+
+.end{
+    position: absolute;
+    color: #fffefe;
+    bottom: 35px;
+    font-size: 14px;
+}
+@media (max-width:1205px){
+    #heading{
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+    }
+    #para{
+        font-size: 0.9rem;
+        transition: 0.4s;
+        padding: 10px;
+    }
+}
+@media (max-width:1113px){
+    #para{
+        font-size: 0.8rem;
+        transition: 0.4;
+    }
+}
+@media (max-width:1052px){
+    #para{
+        font-size: 0.7 rem;
+        transition: 0.4s;
+    }
+}
+@media (max-width:949px){
+    .flexxy{
+        flex-wrap: wrap;
+    }
+    #para{
+        font-size: 1rem;
+        transition: 0.4s;
+    }
+
+}
+
+@media (min-width: 783px) and  (max-width:949px){
+    .carousel__button {
+        position: absolute;
+        top: 50%;
+        padding-left: 50px;
+        transform: translateY(-50%);
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+        margin-right: 100px;
+      }
+      .carousel__button:hover {
+        color: white;
+        border-radius: 20px;
+      }
+      
+      .carousel__button--left {
+        z-index: 1000;
+      }
+
+      .carousel__button--right {
+         transform: translateY(-50%) rotate(180deg)
+      }
+      .carousel__button img {
+
+        width: 25px;
+      }
+
+      .carousel1{
+        margin-left: 194px;
+      }
+
+      .carousel__nav{
+        padding: 20px 100px 0 0;
+      }
+
+    footer p:nth-child(1){
+        font-size: 20px;
+        color: white;
+        margin-bottom: 20px;
+        font-weight: bold;
+        transition: .4s;
+    }
+}
+
+@media (max-width: 783px){
+    .carousel__button {
+        position: absolute;
+        top: 50%;
+        padding-left: 50px;
+        transform: translateY(-50%);
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+        margin-right: 100px;
+      }
+      .carousel__button:hover {
+        color: white;
+        border-radius: 20px;
+      }
+      
+      .carousel__button--left {
+        z-index: 1000;
+      }
+
+      .carousel__button--right {
+         transform: translateY(-50%) rotate(180deg)
+      }
+      .carousel__button img {
+
+        width: 25px;
+      }
+    .carousel1{
+        margin-left: 150px;
+    }
+
+    .carousel__nav{
+        padding: 20px 100px 0 0;
+    }
+}
+@media (max-width: 802px){
+    nav ul li{
+        padding: 5px 15px;
+        transition: .5s;
+    }
+
+    nav ul li a{
+        font-size: 10px;
+        transition: .5s;
+    }
+
+    nav ul li .active{
+        padding-left: 0px !important;
+        transition: .4s;
+    }
+}
+@media (max-width: 900px){
+
+    .logo{
+        font-size: 1.5rem;
+        transition: .5s;
+        padding-left: 20px;
+    }
+
+    nav ul li{
+        padding: 5px 20px;
+        transition: .5s;
+    }
+
+    nav ul li a{
+        font-size: 12px;
+        transition: .5s;
+    }
+
+    nav ul li .active{
+        padding-left: 90px;
+        transition: .4s;
+    }
+
+    #heading{
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    #para{
+        font-size: 0.6rem;
+        padding-left: 20px;
+        padding-right: 90px;
+    }
+}
+
+@media (max-width: 783px){
+    footer p:nth-child(1){
+        font-size: 20px;
+        color: white;
+        margin-bottom: 20px;
+        font-weight: bold;
+        transition: 0.4s;
+    }
+}
+
+@media (max-width: 739px){
+    .carousel__button {
+        position: absolute;
+        top: 50%;
+        padding-left: 50px;
+        transform: translateY(-50%);
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+        margin-right: 100px;
+      }
+      .carousel__button:hover {
+        color: white;
+        border-radius: 20px;
+      }
+      
+      .carousel__button--left {
+        z-index: 1000;
+      }
+
+      .carousel__button--right {
+         transform: translateY(-50%) rotate(180deg)
+      }
+      .carousel__button img {
+
+        width: 25px;
+      }
+    .carousel1{
+        margin-left: 100px;
+    }
+
+    .carousel__nav{
+        padding: 20px 100px 0 0;
+    }
+
+    #para{
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 689px){
+    .carousel__button {
+        position: absolute;
+        top: 50%;
+        padding-left: 50px;
+        transform: translateY(-50%);
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+        margin-right: 100px;
+      }
+      .carousel__button:hover {
+        color: white;
+        border-radius: 20px;
+      }
+      
+      .carousel__button--left {
+        z-index: 1000;
+      }
+
+      .carousel__button--right {
+         transform: translateY(-50%) rotate(180deg)
+      }
+      .carousel__button img {
+
+        width: 25px;
+      }
+    .carousel1{
+        margin-left: 80px;
+    }
+
+    .carousel__nav{
+        padding: 20px 100px 0 0;
+    }
+
+    #para{
+        padding-right: 70px;
+    }
+}
+@media (max-width: 669px){
+    .carousel__button {
+        position: absolute;
+        top: 50%;
+        padding-left: 50px;
+        transform: translateY(-50%);
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+        margin-right: 100px;
+      }
+      .carousel__button:hover {
+        color: white;
+        border-radius: 20px;
+      }
+      
+      .carousel__button--left {
+        z-index: 1000;
+      }
+
+      .carousel__button--right {
+         transform: translateY(-50%) rotate(180deg)
+      }
+      .carousel__button img {
+
+        width: 25px;
+      }
+    .carousel1{
+        margin-left: 50px;
+    }
+
+    .carousel__nav{
+        padding: 20px 100px 0 0;
+    }
+
+    #para{
+        padding-right: 100px;
+    }
+}
+@media (max-width: 639px){
+    .carousel__button {
+        position: absolute;
+        top: 50%;
+        padding-left: 50px;
+        transform: translateY(-50%);
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+        margin-right: 100px;
+      }
+      .carousel__button:hover {
+        color: white;
+        border-radius: 20px;
+      }
+      
+      .carousel__button--left {
+        z-index: 1000;
+      }
+
+      .carousel__button--right {
+         transform: translateY(-50%) rotate(180deg)
+      }
+      .carousel__button img {
+
+        width: 25px;
+      }
+    .carousel1{
+        margin-left: 30px;
+    }
+
+    .carousel__nav{
+        padding: 20px 100px 0 0;
+    }
+
+    #para{
+        padding-right: 70px;
+    }
+}
+@media (max-width: 619px){
+    .carousel__button {
+        position: absolute;
+        top: 50%;
+        padding-left: 50px;
+        transform: translateY(-50%);
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+        margin-right: 100px;
+      }
+      .carousel__button:hover {
+        color: white;
+        border-radius: 20px;
+      }
+      
+      .carousel__button--left {
+        z-index: 1000;
+      }
+
+      .carousel__button--right {
+         transform: translateY(-50%) rotate(180deg)
+      }
+      .carousel__button img {
+
+        width: 25px;
+      }
+    .carousel1{
+        margin-left: 20px;
+    }
+
+    .carousel__nav{
+        padding: 20px 100px 0 0;
+    }
+
+    #para{
+        padding-right: 90px;
+    }
+}
+@media (max-width: 695px){
+    nav ul li{
+        padding: 5px 12px;
+        transition: .5s;
+    }
+    footer p:nth-child(1){
+        font-size: 10px;
+        color: white;
+        margin-bottom: 20px;
+        font-weight: bold;
+        transition: 0.4s;
+    }
+}
+@media (max-width: 629px){
+    nav ul li{
+        padding: 5px 12px;
+        transition: .5s;
+    }
+}
+@media (max-width: 600px){
+    .checkbtn{
+        display: block;
+    }
+    nav ul{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+    }
+    
+}
+
+@media screen and (max-width: 470px){
+    .carousel-item{
+        height: 50vh;
+    }
+
+    .carousel-item img{
+        object-fit: cover;
+        padding-bottom: 300px;
+    }
+    .logo{
+        padding-right: 180px;
+    }
+    section {
+        height: 20vh;
+        grid-row-start: 1;
+        grid-row-end: 6;
+        width: 400px;
+        margin-top: 100px !important;
+        grid-template-columns: repeat(2 ,50%);
+        grid-template-rows: repeat(3, 35%);
+        padding: 0 0 0 60px;
+    }
+    section .card:nth-child(5) {
+        grid-column: span 2;
+    }
+    section .card {
+        grid-column: span 1;
+    }
+}
